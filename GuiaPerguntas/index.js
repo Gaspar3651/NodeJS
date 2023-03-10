@@ -10,13 +10,19 @@ app.get(
         var nome = 'Andri';
         var lang = 'JS';
         var exibirMsg = false;
+        var produtos = [
+            {nome: 'Doritos', preco: 3.14},
+            {nome: 'Coca-cola', preco: 5},
+            {nome: 'Leite', preco: 1.45}
+        ];
 
         res.render(
             'index.ejs', 
             {
                 nome, 
                 lang,
-                exibirMsg
+                exibirMsg,
+                produtos
             }
         );
     }

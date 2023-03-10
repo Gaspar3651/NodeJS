@@ -15,8 +15,12 @@
                 <p>Nome: <%= nome %></p>
                 <p>Linguagem: <%= lang %></p>
                 <p>Exibir Mensagem? <%= exibirMsg %></p>
-
         <% } %>
 
+        <% produtos.forEach(function(produto){ %>
+            <hr>
+            <h5><%= produto.nome %></h5>
+            <h4><%= produto.preco %></h4>
+        <% }) %>
     </body>
 </html>
