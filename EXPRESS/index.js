@@ -18,13 +18,25 @@ app.get(
         } else {
             res.end('F artigo');   
         }
+        if (parametros.artigo) {
+            res.end('Teve artigo');   
+        } else {
+            res.end('F artigo');   
+        }
     }
-);
+    );
+    
+    app.get(
+        '/canal/youtube',
+        function(req, res){
+            let parametros = req.query['canal'];
+            
+            if (parametros) {
+                res.end('Bem vindo ao meu canal '+ parametros);   
+            } else {
+                res.end('Nenhum canal fornecido');   
+            }
 
-app.get(
-    '/canal/youtube',
-    function(req, res){
-        res.end('Bem vindo ao meu canal');   
     }
 );
 
