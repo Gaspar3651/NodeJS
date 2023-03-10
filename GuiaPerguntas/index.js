@@ -9,12 +9,14 @@ app.get(
     function (req, res) {
         var nome = 'Andri';
         var lang = 'JS';
+        var exibirMsg = false;
 
         res.render(
             'index.ejs', 
             {
                 nome, 
-                lang
+                lang,
+                exibirMsg
             }
         );
     }

@@ -8,9 +8,15 @@
     </head>
     <body>
         <h1>Guia de perguntas</h1>
-        <hr>
+        <hr>        
+        <% if(exibirMsg){ %>
+            <h3>Isso é um erro</h3>
+        <% } else { %>
+                <p>Nome: <%= nome %></p>
+                <p>Linguagem: <%= lang %></p>
+                <p>Exibir Mensagem? <%= exibirMsg %></p>
 
-        <p>Nome: <%= nome %></p>
-        <p>Linguagem: <%= lang %></p>
+        <% } %>
+
     </body>
 </html>
