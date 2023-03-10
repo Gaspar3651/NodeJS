@@ -3,6 +3,7 @@ const app = express();
 
 // USANDO EJS COMO VIEW ENGINE NO LUGAR DE HTML
 app.set('view engine', 'ejs');
+app.use(express.static('public'));
 
 app.get(
     '/',
