@@ -10,9 +10,14 @@ app.get(
 );
 
 app.get(
-    '/blog',
+    '/blog/:artigo?',
     function(req, res){
-        res.end('Bem vindo ao meu blog');   
+        let parametros = req.params;
+        if (parametros.artigo) {
+            res.end('Teve artigo');   
+        } else {
+            res.end('F artigo');   
+        }
     }
 );
 
@@ -20,6 +25,14 @@ app.get(
     '/canal/youtube',
     function(req, res){
         res.end('Bem vindo ao meu canal');   
+    }
+);
+
+app.get(
+    '/ola/:nome/:empresa?',
+    function(req, res){
+        let parametros = req.params;
+        res.send('<h1>Oiiiii '+ parametros.nome + '</h1>');   
     }
 );
 
