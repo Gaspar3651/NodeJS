@@ -7,7 +7,16 @@ app.set('view engine', 'ejs');
 app.get(
     '/',
     function (req, res) {
-        res.render('index.ejs');
+        var nome = 'Andri';
+        var lang = 'JS';
+
+        res.render(
+            'index.ejs', 
+            {
+                nome, 
+                lang
+            }
+        );
     }
 );
 
